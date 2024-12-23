@@ -1,0 +1,19 @@
+<div *ngIf="selectedSpace$ | async as selectedSpace;">
+<div class="containerpayment">
+    <div class="confirmation-box">
+        <div class="checkmark">&#10003;</div>
+        <h2>Your Pet’s Boarding Space is Confirmed!</h2>
+        <p>We’re excited to pamper your pet in their customised boarding space.</p>
+        <h3>Date & Time</h3>
+        <p><strong>On Oct 21, 2024</strong> at <strong>6:30 PM</strong></p>
+        <div class="pet-location">
+            <div>
+                <span>{{ selectedSpace.logo }}</span>
+                <strong>{{ selectedSpace.name }}</strong><br>
+                <span>{{ selectedSpace.location }}</span>
+            </div>
+        </div>
+        <button class="back-home" (click)="backtohome()">← Back to Home</button>
+    </div>
+</div>
+</div>

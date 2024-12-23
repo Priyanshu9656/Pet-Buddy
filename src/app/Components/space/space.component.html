@@ -1,0 +1,95 @@
+<div class="flex mt-10" style="background-color: #E5EEF1;" >
+
+
+    <div class="bg-gray-50 p-6 ml-4 rounded-lg shadow-md w-2/6 mx-auto">
+      <div *ngIf="selectedSpace$ | async as selectedSpace; else noSpace">
+
+      
+        <div class="flex items-center space-x-4 mb-4">
+      
+          <div>{{selectedSpace.logo}}</div>
+      
+          <div>
+      
+            <h2 class="text-xl font-semibold">{{ selectedSpace.name }}</h2>
+      
+            <p class="text-gray-500">{{ selectedSpace.location }}</p>
+      
+          </div>
+      
+        </div>
+  
+        <div class="flex items-center text-gray-500 space-x-2 mb-4">
+      
+          <span class="flex items-center">
+      
+            <span class="material-icons text-yellow-500">star</span>
+      
+            <span class="ml-1">{{ selectedSpace.rating }}</span>
+      
+          </span>
+      
+          <span class="flex items-center">
+      
+            <span class="material-icons">location_on</span>
+      
+            <span class="ml-1">{{ selectedSpace.distance }}</span>
+      
+          </span>
+      
+        </div>
+      
+        <!-- Address Section -->
+      
+        <p class="text-gray-700 text-sm mb-4">
+      
+          {{ selectedSpace.location }}
+      
+        </p>
+    
+      <!-- Owner Section -->
+      <div class="flex items-center bg-gray-100 p-4 rounded-lg">
+        <img
+          src="../../../assets/Ellipse 2.png" 
+          alt="Owner Profile"
+          class="w-10 h-10 rounded-full mr-4"
+        />
+        <div>
+          <p class="text-gray-500 text-sm">Owner</p>
+          <p class="text-gray-800 font-semibold">Peter Park</p>
+          <p class="text-gray-500 text-sm">Contact: +91456789034</p>
+        </div>
+      </div>
+    </div>
+  
+    <ng-template #noSpace>
+      <p class="text-red-500">No space selected. Please choose a space to show its details.</p>
+    </ng-template>
+
+    </div>
+
+
+  <div class="p-6 w-3/6 mx-auto bg-white rounded-lg shadow-md">
+    <div class="transition duration-300 ease-in-out" *ngIf="showSpace === 1">
+        <app-date-time (proceed)="proceed()"></app-date-time>
+      </div>
+  
+      <div class="transition duration-300 ease-in-out" *ngIf="showSpace === 2">
+        <app-grid (proceed)="proceed()"></app-grid>
+      </div>
+  
+      <div class="transition duration-300 ease-in-out" *ngIf="showSpace === 3">
+        <app-custom-space (proceed)="proceed()"></app-custom-space>
+      </div>
+  
+      <div class="transition duration-300 ease-in-out" *ngIf="showSpace === 4">
+        <app-preview (proceed)="proceed()"></app-preview>
+      </div>
+
+      <div class="transition duration-300 ease-in-out" *ngIf="showSpace === 5">
+        <app-payment-prev (proceed)="proceed()"></app-payment-prev>
+      </div>
+
+  </div>
+
+</div>

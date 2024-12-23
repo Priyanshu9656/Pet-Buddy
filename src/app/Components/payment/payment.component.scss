@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #59b6d6; /* Light background color */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;
+}
+
+.containerpayment {
+    padding: 2rem;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #dbeaf0;
+}
+
+.confirmation-box {
+    border: 2px solid #8B5CF6; /* Purple border */
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: white;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.checkmark {
+    font-size: 3rem;
+    color: #22C55E; /* Green color for checkmark */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+p {
+    color: #555555; /* Grey text for body */
+}
+
+h3 {
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+}
+
+.pet-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.paw-icon {
+    width: 40px; /* Adjust this size accordingly */
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.back-home {
+    background-color: #007BFF; /* Blue Background */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.back-home:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

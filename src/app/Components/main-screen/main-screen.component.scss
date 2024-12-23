@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #59b6d6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.profile img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+main {
+    padding: 20px;
+    background: #E5EEF1;
+
+}
+
+.clinics,
+.smart-boarding,
+.doctors,
+.boarding-history,
+.specialists {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.clinic-cards,
+.boarding-cards,
+.doctor-cards,
+.boarding-history-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.clinic-card,
+.boarding-card,
+.doctor-card,
+.boarding-history-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.clinic-card img,
+.boarding-card img,
+.doctor-card img,
+.boarding-history-card img {
+    width: 80px; /* Use consistent image size */
+    height: 80px; 
+    border-radius: 10px;
+    margin-right: 20px;   /* Space between image and text */
+}
+
+.clinic-info,
+.boarding-info,
+.doctor-info,
+.boarding-history-info {
+    text-align: left; /* Align text to left */
+}
+
+.highlighted {
+    border: 2px solid #007bff; /* Highlight border */
+}
+
+.specialist-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping of specialists */
+    gap: 20px; /* Space between specialists */
+}
+
+.specialist {
+    display: flex;
+    flex-direction: column; /* Align image above text */
+    align-items: center; /* Center-align items */
+    text-align: center; /* Center text */
+}
+
+.mainspec{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.specialist img {
+    width: 80px; /* Width for the specialist images */
+    height: 80px; /* Height for the specialist images */
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 5px; /* Space below the image */
+}

@@ -1,0 +1,52 @@
+{
+    "backLink": "Back to Smart Boarding",
+    "search": {
+        "placeholder": "Banglore",
+        "buttonText": "Search"
+    },
+    "spaces": {
+        "title": "Spaces Near by You",
+        "cards": [
+            {
+                "logo": "🐾",
+                "name": "Pet Paradise",
+                "location": "Indira Nagar",
+                "rating": 4.8,
+                "distance": "3.1 km",
+                "timings": "12:00 PM - 10:00 PM",
+                "status": "Closed on Sundays",
+                "highlighted": true
+            },
+            {
+                "logo": "🏠",
+                "name": "Furry Home Away Home",
+                "location": "Indira Nagar",
+                "rating": 4.8,
+                "distance": "3.1 km",
+                "timings": "12:00 PM - 10:00 PM",
+                "status": "Open Everyday",
+                "highlighted": false
+            },
+            {
+                "logo": "🐶",
+                "name": "Paws & Play Retreat",
+                "location": "Indira Nagar",
+                "rating": 4.8,
+                "distance": "3.1 km",
+                "timings": "12:00 PM - 10:00 PM",
+                "status": "Open Everyday",
+                "highlighted": false
+            },
+            {
+                "logo": "❤️",
+                "name": "Pawsitive Place",
+                "location": "Indira Nagar",
+                "rating": 4.8,
+                "distance": "3.1 km",
+                "timings": "12:00 PM - 10:00 PM",
+                "status": "Open Everyday",
+                "highlighted": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,168 @@
+{
+    "clinics": [
+        {
+            "name": "Indira Pet Clinic",
+            "type": "Veterinary Care",
+            "location": "Indira Nagar",
+            "rating": 4.8,
+            "distance": "3.2 km",
+            "image": "../../assets/image.png"
+        },
+        {
+            "name": "Cessna Lifeline Veterinary",
+            "type": "Veterinary Care",
+            "location": "Kalyan Nagar",
+            "rating": 4.8,
+            "distance": "2.4 km",
+            "image": "../../assets/image (1).png"
+        },
+        {
+            "name": "Animal Care Clinic",
+            "type": "Veterinary Care",
+            "location": "Banaswadi",
+            "rating": 4.8,
+            "distance": "1.2 km",
+            "image": "../../assets/image (2).png"
+        },
+        {
+            "name": "Pet Care",
+            "type": "Veterinary Care",
+            "location": "Rammurthy Nagar",
+            "rating": 4.8,
+            "distance": "2.2 km",
+            "image": "../../assets/image (3).png"
+        }
+    ],
+    "smartBoarding": [
+        {
+            "title": "Customizable Boarding Spaces",
+            "description": "Choose customization for your pets",
+            "image": "../../assets/image (4).png"
+        },
+        {
+            "title": "Pet Socialization Programs",
+            "description": "Stay with structured pet socialization",
+            "image": "../../assets/image (5).png"
+        },
+        {
+            "title": "On-Demand Boarding Services",
+            "description": "Book anytime for your pet's comfort",
+            "image": "../../assets/image (6).png"
+        },
+        {
+            "title": "Peer-to-Peer Boarding",
+            "description": "Trusted care from fellow pet owners",
+            "image": "../../assets/image (7).png"
+        }
+    ],
+    "doctors": [
+        {
+            "name": "Dr. Nitish Kalliampur",
+            "specialty": "Veterinary Surgeon",
+            "experience": "22 years experience",
+            "location": "Indira Nagar",
+            "rating": 4.8,
+            "distance": "3.1 km",
+            "image": "../../assets/image (8).png"
+        },
+        {
+            "name": "Dr. Anna Johanson",
+            "specialty": "Veterinarian",
+            "experience": "08 years experience",
+            "location": "Indira Nagar",
+            "rating": 4.8,
+            "distance": "2.4 km",
+            "image": "../../assets/image (9).png"
+        },
+        {
+            "name": "Dr. Santhosh",
+            "specialty": "Veterinary Physician",
+            "experience": "16 years experience",
+            "location": "Indira Nagar",
+            "rating": 4.8,
+            "distance": "4.3 km",
+            "image": "../../assets/image (10).png"
+        },
+        {
+            "name": "Dr. Elina",
+            "specialty": "Veterinarian",
+            "experience": "12 years experience",
+            "location": "Indira Nagar",
+            "rating": 4.8,
+            "distance": "4.3 km",
+            "image": "../../assets/image.png"
+        }
+    ],
+    "boardingHistory": [
+        {
+            "name": "Furry Heaven",
+            "location": "Indira Nagar",
+            "rating": 4.8,
+            "distance": "3.1 km",
+            "image": "../../assets/image.png"
+        },
+        {
+            "name": "The Snuggle Spot",
+            "location": "Indira Nagar",
+            "rating": 4.8,
+            "distance": "2.4 km",
+            "image": "../../assets/image.png"
+        },
+        {
+            "name": "The Tail Wagging",
+            "location": "Indira Nagar",
+            "rating": 4.8,
+            "distance": "4.3 km",
+            "image": "../../assets/image.png"
+        },
+        {
+            "name": "Elite Pets Boarding",
+            "location": "Indira Nagar",
+            "rating": 4.8,
+            "distance": "4.3 km",
+            "image": "../../assets/image.png"
+        }
+    ],
+    "specialists": [
+        {
+            "name": "Vaccinations",
+            "image": "../../assets/image (8).png"
+        },
+        {
+            "name": "Operations",
+            "image": "../../assets/image (9).png"
+        },
+        {
+            "name": "Dentistry",
+            "image": "../../assets/image (10).png"
+        },
+        {
+            "name": "Nail Trimming",
+            "image": "../../assets/image (11).png"
+        },
+        {
+            "name": "Flea Treatment",
+            "image": "../../assets/image (12).png"
+        },
+        {
+            "name": "Pet Physiotherapy",
+            "image": "../../assets/image (13).png"
+        },
+        {
+            "name": "Surgery",
+            "image": "../../assets/image (14).png"
+        },
+        {
+            "name": "Diagnostics",
+            "image": "../../assets/image (15).png"
+        },
+        {
+            "name": "General Care",
+            "image": "../../assets/image (16).png"
+        },
+        {
+            "name": "Intensive Care",
+            "image": "../../assets/image (17).png"
+        }
+    ]
+}

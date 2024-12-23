@@ -1,0 +1,46 @@
+<div class="container mx-auto p-5" *ngIf="boardingSpaceDetails$ | async as boardingSpaceDetails; else loading">
+
+    <h2 class="text-xl mb-2">Preview Boarding Space Details</h2>
+
+    <div id="contentToConvert">
+
+
+    <div class="date-time flex items-center mb-5">
+        <span class="icon mr-2">📅</span> {{boardingSpaceDetails.date}}
+        <span class="icon mr-2">⏰</span> {{boardingSpaceDetails.time}}
+    </div>
+
+    <div class="section mb-5">
+        <h3 class="text-lg f    ont-semibold mb-2">Bedding Selection</h3>
+        <div class="bedding-details p-2">
+            <p><strong>Size:</strong> {{boardingSpaceDetails.bedding.size}}</p>
+            <p><strong>Type:</strong> {{boardingSpaceDetails.bedding.type}}</p>
+        </div>
+    </div>
+
+    <div class="section mb-5">
+        <h3 class="text-lg font-semibold mb-2">Toy Selection</h3>
+        <p><strong>Fetch Toy:</strong> {{boardingSpaceDetails.toys.fetchToy}}</p>
+        <p><strong>Chew Toy:</strong> {{boardingSpaceDetails.toys.chewToy}}</p>
+    </div> 
+
+    <div class="section mb-5">
+        <h3 class="text-lg font-semibold mb-2">Environment Settings</h3>
+        <p><strong>Safety Features:</strong> {{boardingSpaceDetails.environment.safetyFeatures}}</p>
+        <p><strong>Play Area:</strong> {{boardingSpaceDetails.environment.playArea}}</p>
+        <p><strong>Lighting Options:</strong> {{boardingSpaceDetails.environment.lightingOptions}}</p>
+    </div>
+
+    </div>
+
+    <div class="buttons flex justify-between mb-2">
+        <button class="confirm-btn bg-blue-500 text-white p-2 rounded shadow cursor-pointer" (click)="generatePDF()">Generate PDF</button>
+        <button class="confirm-btn bg-blue-500 text-white p-2 rounded shadow cursor-pointer" (click)="goahead()">Confirm & Proceed</button>
+    </div>
+
+    <p class="note text-sm text-gray-600">{{boardingSpaceDetails.note}}</p>
+</div>
+
+<ng-template #loading>
+    <p>Loading boarding space details...</p>
+  </ng-template>

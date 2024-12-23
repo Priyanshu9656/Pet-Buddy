@@ -1,0 +1,216 @@
+<div class="max-w-2xl mx-auto bg-white p-6 mt-8">
+        <div class="flex items-center mb-4">
+          <button class="text-lg font-semibold text-gray-600 mr-2">&larr;</button>
+          <h2 class="text-xl font-semibold">Customize Your Pet’s Boarding Space</h2>
+        </div>
+      
+        <div class="flex justify-around mb-6 border-b">
+          <button (click)="switchTab(0)"
+                  [class.font-semibold]="currentTabIndex === 0"
+                  [class.text-black]="currentTabIndex === 0"
+                  class="py-2 text-gray-500">
+            Bedding Selection
+          </button>
+      
+          <button (click)="switchTab(1)"
+                  [class.font-semibold]="currentTabIndex === 1"
+                  [class.text-black]="currentTabIndex === 1"
+                  class="py-2 text-gray-500">
+            Toy Selection
+          </button>
+      
+          <button (click)="switchTab(2)"
+                  [class.font-semibold]="currentTabIndex === 2"
+                  [class.text-black]="currentTabIndex === 2"
+                  class="py-2 text-gray-500">
+            Environment Settings
+          </button>
+        </div>
+      
+        <div *ngIf="currentTabIndex === 0" class="space-y-6">
+          
+          <!-- Bedding Size Selection -->
+          <h3 class="text-lg font-semibold">Bedding Size:</h3>
+          <div class="flex space-x-4">
+            <button (click)="selectBeddingSize('Small')"
+                    [class.bg-black]="selectedBeddingSizes.includes('Small')"
+                    [class.text-white]="selectedBeddingSizes.includes('Small')"
+                    class="py-2 px-4 border rounded-full">Small</button>
+            <button (click)="selectBeddingSize('Medium')"
+                    [class.bg-black]="selectedBeddingSizes.includes('Medium')"
+                    [class.text-white]="selectedBeddingSizes.includes('Medium')"
+                    class="py-2 px-4 border rounded-full">Medium</button>
+            <button (click)="selectBeddingSize('Large')"
+                    [class.bg-black]="selectedBeddingSizes.includes('Large')"
+                    [class.text-white]="selectedBeddingSizes.includes('Large')"
+                    class="py-2 px-4 border rounded-full">Large</button>
+            <button (click)="selectBeddingSize('Extra Large')"
+                    [class.bg-black]="selectedBeddingSizes.includes('Extra Large')"
+                    [class.text-white]="selectedBeddingSizes.includes('Extra Large')"
+                    class="py-2 px-4 border rounded-full">Extra Large</button>
+          </div>
+      
+          <!-- Type of Bedding Selection -->
+          <h3 class="text-lg font-semibold">Type of Bedding:</h3>
+          <div class="flex flex-wrap gap-2">
+            <button (click)="selectBeddingType('Mattresses with Raised Edges')"
+                    [class.bg-black]="selectedBeddingTypes.includes('Mattresses with Raised Edges')"
+                    [class.text-white]="selectedBeddingTypes.includes('Mattresses with Raised Edges')"
+                    class="py-2 px-4 border rounded-full">Mattresses with Raised Edges</button>
+      
+            <button (click)="selectBeddingType('Cooling Mats')"
+                    [class.bg-black]="selectedBeddingTypes.includes('Cooling Mats')"
+                    [class.text-white]="selectedBeddingTypes.includes('Cooling Mats')"
+                    class="py-2 px-4 border rounded-full">Cooling Mats</button>
+      
+            <button (click)="selectBeddingType('Memory Foam Beds')"
+                    [class.bg-black]="selectedBeddingTypes.includes('Memory Foam Beds')"
+                    [class.text-white]="selectedBeddingTypes.includes('Memory Foam Beds')"
+                    class="py-2 px-4 border rounded-full">Memory Foam Beds</button>
+      
+            <button (click)="selectBeddingType('Plush Pillows')"
+                    [class.bg-black]="selectedBeddingTypes.includes('Plush Pillows')"
+                    [class.text-white]="selectedBeddingTypes.includes('Plush Pillows')"
+                    class="py-2 px-4 border rounded-full">Plush Pillows</button>
+      
+            <button (click)="selectBeddingType('Nest Beds')"
+                    [class.bg-black]="selectedBeddingTypes.includes('Nest Beds')"
+                    [class.text-white]="selectedBeddingTypes.includes('Nest Beds')"
+                    class="py-2 px-4 border rounded-full">Nest Beds</button>
+      
+            <button (click)="selectBeddingType('Luxury Faux Fur Beds')"
+                    [class.bg-black]="selectedBeddingTypes.includes('Luxury Faux Fur Beds')"
+                    [class.text-white]="selectedBeddingTypes.includes('Luxury Faux Fur Beds')"
+                    class="py-2 px-4 border rounded-full">Luxury Faux Fur Beds</button>
+      
+            <button (click)="selectBeddingType('Hammock Beds')"
+                    [class.bg-black]="selectedBeddingTypes.includes('Hammock Beds')"
+                    [class.text-white]="selectedBeddingTypes.includes('Hammock Beds')"
+                    class="py-2 px-4 border rounded-full">Hammock Beds</button>
+      
+            <button (click)="selectBeddingType('Tent Beds')"
+                    [class.bg-black]="selectedBeddingTypes.includes('Tent Beds')"
+                    [class.text-white]="selectedBeddingTypes.includes('Tent Beds')"
+                    class="py-2 px-4 border rounded-full">Tent Beds</button>
+      
+            <button (click)="selectBeddingType('Soft Blankets')"
+                    [class.bg-black]="selectedBeddingTypes.includes('Soft Blankets')"
+                    [class.text-white]="selectedBeddingTypes.includes('Soft Blankets')"
+                    class="py-2 px-4 border rounded-full">Soft Blankets</button>
+          </div>
+        </div>
+      
+        <div *ngIf="currentTabIndex === 1" class="space-y-6">
+          <h3 class="text-lg font-semibold">Fetch Toys:</h3>
+          <div class="flex space-x-4">
+            <button (click)="selectFetchToy('Frisbees')"
+                    [class.bg-black]="selectedFetchToys.includes('Frisbees')"
+                    [class.text-white]="selectedFetchToys.includes('Frisbees')"
+                    class="py-2 px-4 border rounded-full">Frisbees</button>
+      
+            <button (click)="selectFetchToy('Balls')"
+                    [class.bg-black]="selectedFetchToys.includes('Balls')"
+                    [class.text-white]="selectedFetchToys.includes('Balls')"
+                    class="py-2 px-4 border rounded-full">Balls</button>
+      
+            <button (click)="selectFetchToy('Launchers')"
+                    [class.bg-black]="selectedFetchToys.includes('Launchers')"
+                    [class.text-white]="selectedFetchToys.includes('Launchers')"
+                    class="py-2 px-4 border rounded-full">Launchers</button>
+          </div>
+      
+          <h3 class="text-lg font-semibold">Plush Toys:</h3>
+          <div class="flex space-x-4">
+            <button (click)="selectPlushToy('Stuffed Animal')"
+                    [class.bg-black]="selectedPlushToys.includes('Stuffed Animal')"
+                    [class.text-white]="selectedPlushToys.includes('Stuffed Animal')"
+                    class="py-2 px-4 border rounded-full">Stuffed Animal</button>
+      
+            <button (click)="selectPlushToy('Squeaky Toy')"
+                    [class.bg-black]="selectedPlushToys.includes('Squeaky Toy')"
+                    [class.text-white]="selectedPlushToys.includes('Squeaky Toy')"
+                    class="py-2 px-4 border rounded-full">Squeaky Toy</button>
+      
+            <button (click)="selectPlushToy('Tug Toy')"
+                    [class.bg-black]="selectedPlushToys.includes('Tug Toy')"
+                    [class.text-white]="selectedPlushToys.includes('Tug Toy')"
+                    class="py-2 px-4 border rounded-full">Tug Toy</button>
+          </div>
+      
+          <h3 class="text-lg font-semibold">Chew Toys:</h3>
+          <div class="flex space-x-4">
+            <button (click)="selectChewToy('Rubber Chew Toy')"
+                    [class.bg-black]="selectedChewToys.includes('Rubber Chew Toy')"
+                    [class.text-white]="selectedChewToys.includes('Rubber Chew Toy')"
+                    class="py-2 px-4 border rounded-full">Rubber Chew Toy</button>
+      
+            <button (click)="selectChewToy('Rawhide Toy')"
+                    [class.bg-black]="selectedChewToys.includes('Rawhide Toy')"
+                    [class.text-white]="selectedChewToys.includes('Rawhide Toy')"
+                    class="py-2 px-4 border rounded-full">Rawhide Toy</button>
+      
+            <button (click)="selectChewToy('Dental Chew Toy')"
+                    [class.bg-black]="selectedChewToys.includes('Dental Chew Toy')"
+                    [class.text-white]="selectedChewToys.includes('Dental Chew Toy')"
+                    class="py-2 px-4 border rounded-full">Dental Chew Toy</button>
+          </div>
+        </div>
+      
+        <div *ngIf="currentTabIndex === 2" class="space-y-6">
+          <h3 class="text-lg font-semibold">Play Areas:</h3>
+          <div class="flex space-x-4">
+            <button (click)="selectPlayArea('Indoor Play Area')"
+                    [class.bg-black]="selectedPlayAreas.includes('Indoor Play Area')"
+                    [class.text-white]="selectedPlayAreas.includes('Indoor Play Area')"
+                    class="py-2 px-4 border rounded-full">Indoor Play Area</button>
+      
+            <button (click)="selectPlayArea('Outdoor Play Area')"
+                    [class.bg-black]="selectedPlayAreas.includes('Outdoor Play Area')"
+                    [class.text-white]="selectedPlayAreas.includes('Outdoor Play Area')"
+                    class="py-2 px-4 border rounded-full">Outdoor Play Area</button>
+          </div>
+      
+          <h3 class="text-lg font-semibold">Safety Features:</h3>
+          <div class="flex space-x-4">
+            <button (click)="selectSafetyFeature('Non-Slip Flooring')"
+                    [class.bg-black]="selectedSafetyFeatures.includes('Non-Slip Flooring')"
+                    [class.text-white]="selectedSafetyFeatures.includes('Non-Slip Flooring')"
+                    class="py-2 px-4 border rounded-full">Non-Slip Flooring</button>
+      
+            <button (click)="selectSafetyFeature('Secure Fencing')"
+                    [class.bg-black]="selectedSafetyFeatures.includes('Secure Fencing')"
+                    [class.text-white]="selectedSafetyFeatures.includes('Secure Fencing')"
+                    class="py-2 px-4 border rounded-full">Secure Fencing</button>
+          </div>
+      
+          <h3 class="text-lg font-semibold">Lighting Options:</h3>
+          <div class="flex space-x-4">
+            <button (click)="selectLightingOption('Bright Lighting')"
+                    [class.bg-black]="selectedLightingOptions.includes('Bright Lighting')"
+                    [class.text-white]="selectedLightingOptions.includes('Bright Lighting')"
+                    class="py-2 px-4 border rounded-full">Bright Lighting</button>
+      
+            <button (click)="selectLightingOption('Soft Lighting')"
+                    [class.bg-black]="selectedLightingOptions.includes('Soft Lighting')"
+                    [class.text-white]="selectedLightingOptions.includes('Soft Lighting')"
+                    class="py-2 px-4 border rounded-full">Soft Lighting</button>
+      
+            <button (click)="selectLightingOption('Night Light')"
+            [class.bg-black]="selectedLightingOptions.includes('Night Light')"
+            [class.text-white]="selectedLightingOptions.includes('Night Light')"
+            class="py-2 px-4 border rounded-full">Night Light</button>
+          </div>
+        </div>
+      
+        <div class="flex justify-between mt-8">
+          <button (click)="resetCurrentTabSelections()" class="py-2 px-4 text-blue-600 border border-blue-600 rounded-full hover:bg-blue-50">Reset</button>
+          <button (click)="saveAndProceed()"
+                  [disabled]="!isNextStepEnabled()"
+                  class="py-2 px-6 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                  [class.opacity-50]="!isNextStepEnabled()"
+                  [class.cursor-not-allowed]="!isNextStepEnabled()">Save & Next</button>
+        </div>
+      
+        <p class="text-center text-sm text-gray-500 mt-4">We will send the latest updates and communications to your number and email.</p>
+      </div>
+      

@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Select Boarding Space for Your Pet</h1>
+    <div class="map-container">
+        <div class="map">
+            <div class="section fencing">Fencing</div>
+            <div class="section outdoor-play-area">Outdoor Play Area</div>
+            <div class="section small-pets-play-area">Small Pets Play Area-Indoor</div>
+            <div class="section big-pets-play-area">Big Pets Play Area-Indoor</div>
+            <div class="section small-pet-rooms">
+                <div class="room available">1</div>
+                <div class="room available">2</div>
+                <div class="room available">3</div>
+                <div class="room booked"><img src="../../../assets/Group 3710.png" alt="Pet 1"></div>
+                <div class="room booked"><img src="../../../assets/image (18).png" alt="Pet 2"></div>
+            </div>
+            <div class="section large-pet-rooms">Large Pet Rooms</div>
+            <div class="section lobby">Lobby</div>
+            <div class="section entrance">Entrance</div>
+        </div>
+    </div>
+    <div class="legend">
+        <div class="legend-item">
+            <span class="available"></span> Available
+        </div>
+        <div class="legend-item">
+            <span class="booked"></span> Booked
+        </div>
+    </div>
+    <button class="proceed-btn" (click)="onProceed()">Proceed</button>
+    <p class="note">We will send latest updates and communications to your number and email.</p>
+</div>

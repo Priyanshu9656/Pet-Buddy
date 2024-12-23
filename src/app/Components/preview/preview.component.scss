@@ -1,0 +1,78 @@
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px; /* Fixed width of the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Optional: Add border radius for a more modern look */
+    margin-left: 30%;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.date-time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.date-time .icon {
+    margin-right: 5px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.bedding-details {
+    padding: 10px;
+    margin-bottom: 10px; /* Optional: adjust as needed */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.change-btn, .confirm-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.change-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.confirm-btn {
+    background-color: #00aaff;
+    color: #fff;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #666;
+}

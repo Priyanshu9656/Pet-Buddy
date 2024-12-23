@@ -1,0 +1,138 @@
+.containeraddpet {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    height: 100vh;
+    width:100vw;
+
+    background-color: rgb(213, 234, 241);
+
+  }
+
+ 
+
+  .image-section {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+  }
+
+  
+  .add-btn:hover 
+  {
+    background-color: #007acc;
+  }
+
+ 
+
+  .skip-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #007acc;
+    text-decoration: none;
+  }
+
+ 
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+
+ 
+
+  .pet-image {
+
+    padding: 20px;
+
+    height: 500px;
+
+  }
+
+ 
+
+  .form-section {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+  }
+
+ 
+
+  .form-container {
+
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 50px;
+
+    width: 500px;
+
+  }
+
+ 
+
+  h2 {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+  }
+
+ 
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+
+  .form-group input,
+
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+ 
+
+  .add-btn 
+  {
+    width: 100%;
+    padding: 10px;
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+ 

@@ -1,0 +1,34 @@
+<main>
+    <div class="back-link">{{ spacesData.backLink }}</div>
+
+    <div class="search-container">
+        <input
+            type="text"
+            [placeholder]="spacesData.search?.placeholder"
+            [(ngModel)]="searchTerm"
+            (input)="filterSpaces()"
+        />
+        <button class="search-button" (click)="filterSpaces()">{{ spacesData.search?.buttonText }}</button>
+    </div>
+
+    <section class="spaces">
+        <h2>{{ spacesData.spaces?.title }}</h2>
+
+        <div *ngFor="let card of filteredSpaces" class="space-card" [ngClass]="{ highlighted: card.highlighted }">
+            <div class="space-info">
+                <div class="space-logo">{{ card.logo }}</div>
+                <div class="space-details">
+                    <h3>{{ card.name }}</h3>
+                    <p class="location">{{ card.location }}</p>
+                    <p class="rating">⭐ {{ card.rating }} <span>{{ card.distance }}</span></p>
+                </div>
+            </div>
+            <div class="timings">
+                <p>Timings:</p>
+                <p><span>{{ card.timings }}</span></p>
+                <p class="status">{{ card.status }}</p>
+            </div>
+            <button class="select-space" (click)="selectSpace(card)">Select Space</button>
+        </div>
+    </section>
+</main>

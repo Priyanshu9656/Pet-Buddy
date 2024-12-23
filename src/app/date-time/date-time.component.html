@@ -1,0 +1,89 @@
+    <!-- Header -->
+    <h2 class="text-lg font-semibold mb-4">Please Choose Available Date & Slots</h2>
+  
+
+
+
+
+    <div class="mb-6">
+      <label class="block text-gray-700 font-medium">Select Date</label>
+      <div class="flex items-center mt-2 space-x-4">
+        <div class="flex items-center space-x-2">
+          <span class="material-icons text-gray-600">calendar_today</span>
+          <span class="text-gray-600">{{ selectedDate | date: 'MMM d, y, EEEE' }}</span>
+        </div>
+        <button (click)="showDatePicker = !showDatePicker" 
+                class="text-blue-500 border border-blue-500 rounded-full px-3 py-1 text-sm hover:bg-blue-50">
+          Change Date
+        </button>
+      </div>
+  
+      <!-- Date Picker -->
+      <input *ngIf="showDatePicker" type="date" [value]="selectedDate" 
+             (change)="onDateChange($event)" 
+             class="mt-2 border rounded-lg p-2 w-full" />
+    </div>
+  
+
+
+
+    <div class="mb-6">
+      <label class="block text-gray-700 font-medium">Select Time</label>
+      <div class="flex items-center justify-between mt-2 text-gray-500">
+        <button 
+          *ngFor="let period of periods" 
+          (click)="selectPeriod(period.name)"
+          class="flex items-center space-x-2 px-3 py-1 rounded-lg"
+          [ngClass]="{
+            'text-black font-semibold border-b-2 border-black': period.name === selectedPeriod,
+            'text-gray-500 hover:bg-gray-100': period.name !== selectedPeriod
+          }">
+          <span class="material-icons">
+            {{ period.name === 'Morning' ? 'brightness_5' : period.name === 'Afternoon' ? 'brightness_6' : period.name === 'Evening' ? 'wb_sunny' : 'nights_stay' }}
+          </span>
+          <span>{{ period.name }}</span>
+        </button>
+      </div>
+  
+
+
+
+      <!-- Time Slots -->
+      <div class="flex items-center space-x-4 mt-4">
+        <button 
+          *ngFor="let time of selectedTimes" 
+          (click)="selectTime(time)"
+          class="px-4 py-2 border rounded-lg"
+          [ngClass]="{
+            'bg-black text-white': time === selectedTime,
+            'text-gray-700 hover:bg-gray-100': time !== selectedTime
+          }">
+          {{ time }}
+        </button>
+      </div>
+    </div>
+  
+
+
+
+    <!-- Selected Time Display -->
+    <div *ngIf="selectedTime" class="mt-4 text-center text-blue-500 font-medium">
+      Selected Time: {{ selectedTime }}
+    </div>
+  
+
+
+
+    <!-- Proceed Button -->
+    <button [disabled]="!selectedTime"
+     class="w-full bg-blue-500 text-white py-2 rounded-lg font-medium hover:bg-blue-600 mt-4" (click)="onProceed()">
+      Proceed
+    </button>
+  
+
+
+    
+    <!-- Footer Note -->
+    <p class="text-gray-500 text-sm mt-4 text-center">
+      We will send latest updates and communications to your number and email.
+    </p>

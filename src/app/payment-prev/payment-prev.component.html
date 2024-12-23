@@ -1,0 +1,128 @@
+<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <!-- Appointment Details -->
+    <div class="mb-6">
+      <h2 class="text-xl font-semibold">Boarding Space Appointment Details</h2>
+      <div class="flex items-center justify-between text-gray-600 mt-2">
+        <div class="flex items-center space-x-2">
+          <span class="material-icons">event</span>
+          <span>On Oct 21, 2024</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="material-icons">access_time</span>
+          <span>At 6:30 PM</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Payment Mode -->
+    <div class="mb-6">
+      <h2 class="text-xl font-semibold">Payment Mode</h2>
+      <div class="mt-4">
+        <label class="flex items-center space-x-3">
+          <input
+            type="radio"
+            name="paymentMode"
+            class="form-radio h-5 w-5 text-blue-600"
+            [(ngModel)]="paymentMode"
+            value="place"
+          />
+          <span class="text-gray-700">Pay at Place</span>
+          <span class="ml-auto text-gray-600">₹ 600</span>
+        </label>
+  
+        <label class="flex items-center space-x-3 mt-2">
+          <input
+            type="radio"
+            name="paymentMode"
+            class="form-radio h-5 w-5 text-blue-600"
+            [(ngModel)]="paymentMode"
+            value="online"
+          />
+          <span class="text-gray-700">Pay Online</span>
+          <span class="ml-auto text-gray-600">₹ 600</span>
+        </label>
+      </div>
+  
+      <!-- Payment Method Options -->
+      <div *ngIf="paymentMode === 'online'" class="mt-4 space-y-4 bg-gray-100 p-4 rounded-lg">
+        <label class="flex items-center space-x-3">
+          <input
+            type="radio"
+            name="onlinePaymentMethod"
+            class="form-radio h-5 w-5 text-blue-600"
+            [(ngModel)]="onlinePaymentMethod"
+            value="upi"
+          />
+          <span class="text-gray-700">Pay via UPI</span>
+        </label>
+        
+        <div *ngIf="onlinePaymentMethod === 'upi'" class="mt-2">
+          <input
+            type="text"
+            placeholder="Enter UPI ID"
+            class="w-full p-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          <!-- UPI Icons -->
+          <div class="flex space-x-2 mt-2">
+            <img src="../../../assets/image 3.png" alt="UPI" class="h-6" />
+            <img src="../../../assets/image 4.png" alt="UPI" class="h-6" />
+            <img src="../../../assets/image 5.png" alt="UPI" class="h-6" />
+          </div>
+        </div>
+  
+        <label class="flex items-center space-x-3">
+          <input
+            type="radio"
+            name="onlinePaymentMethod"
+            class="form-radio h-5 w-5 text-blue-600"
+            [(ngModel)]="onlinePaymentMethod"
+            value="card"
+          />
+          <span class="text-gray-700">Credit/Debit Cards</span>
+        </label>
+        
+        <!-- Credit/Debit Card Form -->
+        <div *ngIf="onlinePaymentMethod === 'card'" class="mt-2">
+          <div class="space-y-4">
+            <input
+              type="text"
+              placeholder="Card number"
+              class="w-full p-2 border rounded-lg focus:outline-none focus:border-blue-500"
+            />
+            <div class="flex space-x-4">
+              <input
+                type="text"
+                placeholder="MM / YY"
+                class="w-1/2 p-2 border rounded-lg focus:outline-none focus:border-blue-500"
+              />
+              <input
+                type="text"
+                placeholder="CVV"
+                class="w-1/2 p-2 border rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <!-- Card Icons -->
+            <div class="flex space-x-2 mt-2">
+              <img src="../../../assets/image 3 (1).png" alt="Visa" class="h-6" />
+              <img src="../../../assets/image 4 (1).png" alt="MasterCard" class="h-6" />
+              <img src="../../../assets/image 5 (1).png" alt="RuPay" class="h-6" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Confirm Button -->
+    <button
+      (click)="confirmAppointment()"
+      class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700"
+    >
+      Confirm
+    </button>
+  
+    <!-- Footer Text -->
+    <p class="text-gray-500 text-sm mt-4 text-center">
+      We will send appointment-related communications to your number and email.
+    </p>
+  </div>
+  
